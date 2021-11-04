@@ -2,12 +2,16 @@
 #include<conio.h>
 using namespace std;
 int main() {
+	bool done = false;
+	int input;
 	string array[15][15];
 	int x, y;
 	int n = 3, m = 2;
 	char move;
 	int score = 0;
-
+	char exit;
+	system("color 9");
+	
 
 	for (x = 0; x < 15; x++)
 	{
@@ -17,7 +21,7 @@ int main() {
 		}
 	}
 
-	//Diseño de mapa
+	//Dibujado del mapa
 
 	for (x = 0; x < 15; x++)
 	{
@@ -61,7 +65,7 @@ int main() {
 
 	//Imprimir el mapa
 	array[n][m] = "O";
-	cout << "\t\t\tPuntuacion:  " << score;
+	cout << "\t\t\tPuntuacion: " << score;
 	cout << endl;
 	for (x = 0; x < 15; x++) {
 		for (y = 0; y < 15; y++) {
@@ -71,7 +75,11 @@ int main() {
 	}
 	while (true) {
 		cout << "\nELIGE UN MOVIMIENTO";
+		cout << "\nEscribe las letras en minuscula: ";
 		cin >> move;
+		
+		
+		
 
 		if (move == 's') {
 			n++;
@@ -97,6 +105,12 @@ int main() {
 				array[n][m - 1] = " ";
 			}
 		}
+		
+		
+
+		
+		
+		
 
 		if (array[n][m] == "0") {
 			system("CLS");
@@ -109,6 +123,7 @@ int main() {
 			break;
 		}
 
+
 		if (array[n][m] == ".") {
 			score += 1;
 		}
@@ -118,7 +133,7 @@ int main() {
 
 
 		array[n][m] = "O";
-		cout << "\t\t\tPuntuación: " << score;
+		cout << "\t\t\tPuntuacion: " << score;
 		cout << endl;
 		for (x = 0; x < 15; x++) {
 			for (y = 0; y < 15; y++) {
