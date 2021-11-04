@@ -2,8 +2,6 @@
 #include<conio.h>
 using namespace std;
 int main() {
-	bool done = false;
-	int input;
 	string array[15][15];
 	int x, y;
 	int n = 3, m = 2;
